@@ -1,0 +1,251 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+}
+.header {
+  position: fixed;
+  margin-top: 0px;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.container {
+
+  padding-left: 50px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  height: 100%;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .gauche {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container .logo .logoimg {
+  width: 120px;
+  margin-right: 25px;
+}
+
+.header .container .gauche form {
+  display: flex;
+  height: 30px;
+  width: 628px;
+}
+
+.header .container .gauche form input {
+  width: 150%;
+  border-radius: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #edeaea;
+  border: none;
+}
+
+.header .container .icons {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.header .container .icons a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: darkblue;
+  padding-right: 20px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+.header .container i {
+  margin-right: 3px;
+  font-size: 25px;
+  font-weight: 400;
+  color: darkblue;
+  vertical-align: middle;
+}
+.content {
+  background-color: rgba(232, 236, 241, 0.507);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 30px;
+  padding-top: 3px;
+  min-height: calc(100vh - 30px); /* Réduire la hauteur pour laisser de la place pour le header */
+  width: 100%;
+  position: absolute;
+  right: 0;
+
+}
+
+.content .nav {
+  background-color: rgb(183, 183, 213);
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 45px;
+
+
+
+}
+.content .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 25px;
+  margin-right: 70px;
+  margin-left: 40px;
+}
+.content .nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
+}
+@media (max-width: 10000px) {
+  .header .container .logo .logoimg {
+    width: 50%;
+    margin-right: 80px;
+  }
+  .header .container .gauche form{
+    width: 130%;
+
+  }
+  .header .container .icons a  {
+    font-weight: normal;
+    font-size: 80%;
+  }
+  .header .container i{
+
+    font-size: 200%;
+    font-weight: 400;
+  }
+  
+  
+  
+}
+.titre {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  top: 5px;
+}
+.titre h2 {
+  color:red;
+  margin-right: 10px;
+  font-size: 40px;
+  font-weight: 100px;
+}
+.titre h3 {
+  font-size: 30px;
+  font-weight: 350;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+}
+
+.imgs-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  top: -45px;
+  position: relative;
+  width: 90%;
+  left: 120px;
+  right: 50px;
+}
+.imgs-container .box {
+  position: relative;
+  overflow: hidden;
+  width: max-content;
+  height: max-content;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+@media (min-width: 768px) {
+  .imgs-container .box {
+    flex-basis: 80%; /*2 photo*/
+  }
+}
+@media (min-width: 1199px) {
+  .imgs-container .box {
+    flex-basis: 14.5%; /*6 photos*/
+  }
+}
+.imgs-container .box img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
+.imgs-container .box p {
+  top: -10px;
+  position: relative;
+  left: 10%;
+
+  color: black;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+footer .col{
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .col2{
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-right: 20%;
+  margin-top: 35px;
+
+}
+footer .logg{
+  width: 50px;
+  margin-top: 10px;
+}
+footer h4{
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 8px;
+
+}
+footer p{
+  font-size: 15px;
+  margin: 0 0 5px 0;
+  color: #222222e1;
+}
+footer a{
+  font-size: 15px;
+  text-decoration: none;
+  color: #222222c4;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  
+}

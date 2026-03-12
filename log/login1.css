@@ -1,0 +1,622 @@
+
+ /* Général */
+ * {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+}
+.header {
+  position: fixed;
+  margin-top: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.container {
+  padding-left: 50px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  height: 100%;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .gauche {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .logo .logoimg {
+  width: 120px;
+  margin-right: 25px;
+}
+.header .container .gauche form {
+  display: flex;
+  height: 30px;
+  width: 628px;
+}
+.header .container .gauche form input {
+  width: 100%;
+  border-radius: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #edeaea;
+  border: none;
+}
+.header .container .icons {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header .container .icons a {
+  position: relative; /* Ajoutez cette ligne pour permettre le positionnement absolu du span */
+}
+
+.header .container .icons a .num {
+  position: absolute;
+  top: -5px;
+  right: 60px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-width: 15px; /* Assurez une taille minimale pour un affichage correct */
+  height: 17px;
+  /*min-height: 10px; /* Assurez une taille minimale pour un affichage correct */
+}
+
+.header .container .icons a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: darkblue;
+  padding-right: 20px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+.header .container i {
+  margin-right: 3px;
+  font-size: 25px;
+  font-weight: 400;
+  color: darkblue;
+  vertical-align: middle;
+}
+.content {
+  background-color: rgba(232, 236, 241, 0.507);
+  margin: 30px 0 0 0;
+  padding-top: 3px;
+  min-height: calc(100vh - 30px); /* Réduire la hauteur pour laisser de la place pour le header */
+  width: 100%;
+  position: absolute;
+  right: 0;
+}
+.content .nav {
+  background-color: rgb(183, 183, 213);
+  width: 100%;
+  margin: 45px 0 20px 0;
+}
+.content .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 25px;
+  margin: 0 70px 0 40px;
+}
+.content .nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .header .container .gauche form {
+    width: 100%;
+  }
+  .content .nav ul {
+    justify-content: space-around;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+  .header .container .logo .logoimg {
+    width: 100px;
+    margin-right: 20px;
+  }
+  .header .container .gauche form {
+    width: 90%;
+  }
+  .content .nav ul {
+    justify-content: space-around;
+    margin: 0 20px;
+  }
+  .content .nav ul a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 880px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+  .header .container .logo .logoimg {
+    width: 100px;
+    margin-right: 20px;
+  }
+  .header .container .gauche form {
+    width: 90%;
+  }
+  .content .nav ul {
+    display: none;
+  }
+
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+  .header .container .logo .logoimg {
+    width: 80px;
+    margin-right: 15px;
+  }
+  .header .container .gauche form {
+    width: 80%;
+  }
+  .header .container .icons {
+    margin-right: 10px;
+    padding: 10px;
+  }
+  .header .container .icons a {
+    font-size: 12px;
+  }
+  .header .container i {
+    font-size: 20px;
+  }
+  .content .nav ul {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  .header .container .logo .logoimg {
+    width: 70px;
+    margin-right: 10px;
+  }
+  .header .container .gauche form {
+    width: 70%;
+
+  }
+ 
+  .header .container .icons a {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .header .container i {
+    font-size: 18px;
+
+  }
+  .content .nav ul {
+    display: none;
+  }
+}
+
+.containerr {
+ 
+  position: relative;
+  width: 70vw;
+  height: 78vh;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex; /* Ajoutez cette ligne */
+  align-items: center; /* Ajoutez cette ligne */
+  justify-content: center; /* Ajoutez cette ligne */
+  margin: auto; /* Ajoutez cette ligne */
+}
+
+.containerr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #d85a56cc, rgb(188, 188, 210));
+  z-index: 6;
+  transform: translatex(100%);
+  transition: 1s ease-in-out;
+  display: flex; /* Ajoutez cette ligne */
+  align-items: center; /* Ajoutez cette ligne */
+  justify-content: center; /* Ajoutez cette ligne */
+  margin: auto; /* Ajoutez cette ligne */
+
+}
+
+
+
+.signin-signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 5;
+}
+
+.containerr form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  min-width: 238px;
+  padding: 0 10px;
+}
+
+
+.containerr form.sign-in-form {
+  opacity: 1;
+  transition:  0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+.containerr form.sign-up-form {
+  opacity: 0;
+  transition:  0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+.containerr .title {
+  font-size: 35px;
+  color: red;
+  margin-bottom: 10px;
+}
+.containerr .input-field {
+  width: 100%;
+  height: 35px;
+  background: #f0f0f0;
+  margin: 10px 0;
+  border: 2px solid rgb(183, 183, 213);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+
+}
+
+.containerr .input-field i {
+  flex: 1;
+  text-align: center;
+  color: #57525279;
+  font-size: 15px;
+}
+.containerr .input-field input {
+  flex: 5;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+
+.containerr .btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background: red;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.containerr .btn:hover {
+  background: red;
+}
+
+a {
+  text-decoration: none;
+}
+.containerr .input-field input::placeholder {
+  color: #57525279; /* Couleur du placeholder */
+  font-weight: 400; /* Poids de la police du placeholder */
+}
+
+.containerr .input-field input:-ms-input-placeholder { /* Pour Internet Explorer */
+  color: #57525279; /* Couleur du placeholder */
+  font-weight: 400; /* Poids de la police du placeholder */
+}
+
+.containerr .input-field input::-ms-input-placeholder { /* Pour Microsoft Edge */
+  color: #57525279; /* Couleur du placeholder */
+  font-weight: 400; /* Poids de la police du placeholder */
+}
+
+
+.panels-containerr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 35%;
+  min-width: 238px;
+  padding: 0 10px;
+  text-align: center;
+ z-index: 6;  
+}
+.left-panel {
+  pointer-events: none;
+}
+.contentt {
+  color: #fff;
+  transition: 1.1s ease-in-out;
+  transition-delay: 0.5S;
+
+}
+.panel h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.panel p{
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+
+
+
+
+.image{
+  width: 100%;
+  transition: 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.left-panel .image,
+.left-panel .contentt {
+  transform: translateX(-200%);
+}
+
+.right-panel .image,
+.right-panel .contentt {
+  transform: translateX(0);
+}
+.account-text{
+  display: none;
+}
+
+
+/*animation*/
+
+.containerr.sign-up-mode::before{
+  transform: translatex(0);
+}
+.containerr.sign-up-mode .right-panel .image,
+.containerr.sign-up-mode .right-panel .contentt{
+  transform: translatex(200%);
+}
+.containerr.sign-up-mode .left-panel .image,
+.containerr.sign-up-mode .left-panel .contentt{
+  transform: translatex(0);
+}
+
+.containerr.sign-up-mode form.sign-in-form {
+  opacity: 0;
+}
+.containerr.sign-up-mode form.sign-up-form {
+  opacity: 1;
+}
+
+
+.containerr.sign-up-mode .right-panel {
+  pointer-events: none;
+}
+.containerr.sign-up-mode .left-panel {
+  pointer-events: all;
+}
+/*Responsive*/
+
+@media (max-width:779px)
+{
+  .containerr {
+      width: 100vw;
+      height: 100vw;
+  }
+}
+@media (max-width:635px){
+  .containerr::before{
+      display: none;
+  }
+  form {
+      width:90%;
+  }
+  form.sign-up-form {
+      display: none;
+  }
+  .containerr.containerr.sign-up-mode2 form.sign-up-form{
+      display: flex;
+      opacity: 1;
+  }
+  .containerr.containerr.sign-up-mode2 form.sign-in-form{
+      display: none;
+  }
+  .panels-containerr {
+      display: none;
+  }
+  .account-text{
+      display: inline;
+  }
+}
+@media (max-width:320px){
+
+form{
+  width: 90%;
+}
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+footer .col{
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .col2{
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-right: 20%;
+  margin-top: 35px;
+
+}
+footer .logg{
+  width: 50px;
+  margin-top: 10px;
+}
+footer h4{
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 8px;
+}
+footer p{
+  font-size: 15px;
+  margin: 0 0 5px 0;
+  color: #222222e1;
+}
+footer a{
+  font-size: 15px;
+  text-decoration: none;
+  color: #222222c4;
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
